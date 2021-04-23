@@ -3,7 +3,7 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client"
 import { IFriend } from "../interfaces/IFriend";
 
-const ALL_FRIENDS = gql`
+export const ALL_FRIENDS = gql`
 {
   getAllFriends{
     id
@@ -21,7 +21,8 @@ interface FriendData {
 export default function All() {
   const { loading, error, data, startPolling } = useQuery<FriendData>(
     ALL_FRIENDS,
-    { fetchPolicy: "cache-and-network" }
+    { fetchPolicy: "cache-first" }
+    //{ fetchPolicy: "cache-and-network" }
   )
   //const {loading,error,data} = useQuery(ALL_FRIENDS)
 

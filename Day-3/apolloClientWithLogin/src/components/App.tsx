@@ -16,6 +16,9 @@ import FindFriend from "./FindFriend"
 import Login from "./Login"
 import Home from "./Home"
 import settings from "../settings.json"
+import DeleteFriend from "./DeleteFriend";
+import UpdateFriend from "./UpdateFriend";
+
 const graphqlURL = settings.graphqlEndpoint;
 
 const httpLink = createHttpLink({ uri: graphqlURL })
@@ -74,6 +77,12 @@ export default function App() {
             </Route>
             <Route path="/addFriend">
               <AddFriend allowEdit={true} />
+            </Route>
+            <Route path="/deleteFriend">
+              <DeleteFriend/>
+            </Route>
+            <Route path="/updateFriend">
+              <UpdateFriend/>
             </Route>
             <Route path="/login" >
               <Login setLoginStatus={setLoginStatus} />

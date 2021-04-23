@@ -37,6 +37,12 @@ export default function Header({ isLoggedIn, loginMsg, setLoginStatus }: addHead
           <li>
             <NavLink exact activeClassName="selected" to="/addFriend">Add Friend</NavLink>
           </li>
+          <li>
+            <NavLink exact activeClassName="selected" to="/deleteFriend">Delete Friend</NavLink>
+          </li>
+          <li>
+            <NavLink exact activeClassName="selected" to="/updateFriend">Update Friend</NavLink>
+          </li>
         </ul>
       </div>
       <nav className="my-2 my-md-0 me-md-3"></nav>

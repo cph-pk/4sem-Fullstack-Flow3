@@ -6,3 +6,9 @@ export interface IFriend {
   password: string
   role?: string
 }
+
+export interface IUpdateFriend {
+  firstName: string
+  lastName: string
+  email: string
+}
